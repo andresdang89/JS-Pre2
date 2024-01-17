@@ -1,4 +1,4 @@
-const joyas = ['Anillo', 'Dije', 'Pulsera'];
+const joyas = ['Anillo con esmeraldas 20k', 'Dije de diamantes y esmeraldas 1k', 'Pulsera de esmealdas 50k'];
 
 joyas.forEach((el, idx) => {
 const nuevaCard = document.createElement("div");
@@ -7,37 +7,41 @@ nuevaCard.innerHTML = `
 <p>${idx + 1}</p>
 <p class="nombreJoyas">${el}</p>
     `;
-    
+   
 
 container.appendChild(nuevaCard);
 });
 
 console.log(document);
 
-
-container.appendChild(etiqueta);
-
 container.className = "container"
 
 const button = document.createElement("button");
 button.className = "btn"
 button.innerText = "Compra";
-button.onclick = () => alert("click");
+button.onclick = () => alert("Bienvenido");
+
+const btnInfo = document.createElement("button");
+    btnInfo.innerText = "Compras";
+    
+    
+
 
 document.body.appendChild(button)
 
-const botonHTML = document.getElementById("btn");
-console.log(botonHTML.innerText);
+const bottonHTML = document.getElementById("btn");
+console.log(bottonHTML.innerText);
 
 let index = 0;
 
-botonHTML.addEventListener("click", () => {
+bottonHTML.addEventListener("click", () => {
 const nuevaCard = document.createElement("div");
 nuevaCard.className = "card";
 nuevaCard.innerHTML = `
 <p>${index + 1}</p>
-<p class "nombreJoya">${frutas[index]}</p>
+<p class "nombreJoya">${joyas[index]}</p>
 `;
+
 
 if(joyas[index]){
 container.appendChild(nuevaCard);
@@ -49,10 +53,10 @@ index += 1;
 
 let flag = false;
 
-botonHTML.addEventListener("click", () => {
+bottonHTML.addEventListener("Bienvenido", () => {
 if (!document.getElementsByClassName("card")[0]) {
 botonHTML.innerText = "Joyas";
-frutas.forEach((el, idx) => {
+joyas.forEach((el, idx) => {
 const nuevaCard = document.createElement("div");
 nuevaCard.className = "card";
 nuevaCard.innerHTML = `
@@ -76,6 +80,8 @@ const caja = document.createElement("div");
 caja.className = "caja";
 
 caja.onmousemove = () => console.log("Bienvenido");
+CanvasGradient.onmousemove = () => console.log("Que deseas comprar?")
+
 
 document.body.appendChild(caja)
 const input = document.createElement("input");
@@ -91,10 +97,8 @@ allJoyas.forEach((el, idx) => {
 
     const imgJoyas = document.createElement("");
     imgJoyas.src = imgJoyas;
+    
 
-    const btnInfo = document.createElement("button");
-    btnInfo.innerText = "Compra";
-    btnInfo.onclick = () => alert("Compraste " + el.name);
 
 
     card.appendChild(imgJoyas);
@@ -103,12 +107,8 @@ allJoyas.forEach((el, idx) => {
     container.appendChild(card);
 })
 
-function guardarLocalStorge(params) {
-    localStorage.setItem("ProductosLocalStorage", JSON.stringify(arrayProductos));
-}
-function mostrarProductos (params){
-    for(arrayProductos of array){
-        alert("Compraste" + productos)
-    }
-}
+localStorage.setItem("nombreUsuario", + nombreJoya);
+var Joyas = localStorage.getItem("nombreJoyas");
+localStorage.removeItem("nombreJoyas");
+
 
