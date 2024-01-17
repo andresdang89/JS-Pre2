@@ -1,0 +1,48 @@
+.container{ 
+    background-color: beige;
+    display: grid;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+    padding: 2rem;
+    display: flex;
+    align-items: baseline;
+}
+.container{
+    background-color: rgb(119, 117, 114);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.card{
+    display: flexbox;
+    justify-content: right;
+    align-items: center;
+    padding: 2rem;
+    height: 10rem;
+    width: 10rem;
+    border: solid 1px black;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem
+}
+
+.nombreJoya{
+    color: rgb(20, 20, 20);
+}
+
+.btn{
+    padding: 1rem;
+    background-color: rgb(96, 99, 99);
+}
+
+.caja{
+    height: 10rem;
+    width: 10rem;
+    background-color: rgb(73, 73, 73);
+}
+.card:hover{
+    cursor: pointer;
+}
