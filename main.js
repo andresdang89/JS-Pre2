@@ -1,114 +1,72 @@
 const joyas = ['Anillo con esmeraldas 20k', 'Dije de diamantes y esmeraldas 1k', 'Pulsera de esmealdas 50k'];
 
+
+const container = document.getElementById("container");
+
 joyas.forEach((el, idx) => {
-const nuevaCard = document.createElement("div");
-nuevaCard.className = "card";
-nuevaCard.innerHTML = `
-<p>${idx + 1}</p>
-<p class="nombreJoyas">${el}</p>
-    `;
-   
-
-container.appendChild(nuevaCard);
-});
-
-console.log(document);
-
-container.className = "container"
-
-const button = document.createElement("button");
-button.className = "btn"
-button.innerText = "Compra";
-button.onclick = () => alert("Bienvenido");
-
-const btnInfo = document.createElement("button");
-    btnInfo.innerText = "Compras";
-    
-    
-
-
-document.body.appendChild(button)
-
-const bottonHTML = document.getElementById("btn");
-console.log(bottonHTML.innerText);
-
-let index = 0;
-
-bottonHTML.addEventListener("click", () => {
-const nuevaCard = document.createElement("div");
-nuevaCard.className = "card";
-nuevaCard.innerHTML = `
-<p>${index + 1}</p>
-<p class "nombreJoya">${joyas[index]}</p>
-`;
-
-
-if(joyas[index]){
-container.appendChild(nuevaCard);
-index += 1;
-};
-
-
-});
-
-let flag = false;
-
-bottonHTML.addEventListener("Bienvenido", () => {
-if (!document.getElementsByClassName("card")[0]) {
-botonHTML.innerText = "Joyas";
-joyas.forEach((el, idx) => {
-const nuevaCard = document.createElement("div");
-nuevaCard.className = "card";
-nuevaCard.innerHTML = `
-<p>${idx + 1}</p>
-<p class="nombreJoya">${el}</p>
-`;
-
-container.appendChild(nuevaCard);
-});
-
-flag = true;
-}
-else {
-botonHTML.innerText = "Mostrar Joyas";
-container.innerHTML = "";
-flag = false;
-}
-});
-
-const caja = document.createElement("div");
-caja.className = "caja";
-
-caja.onmousemove = () => console.log("Bienvenido");
-CanvasGradient.onmousemove = () => console.log("Que deseas comprar?")
-
-
-document.body.appendChild(caja)
-const input = document.createElement("input");
-caja.className = "caja";
-
-input.onkeydown = () => console.log("cambiaste");
-
-document.body.appendChild(input)
-
-allJoyas.forEach((el, idx) => {
     const card = document.createElement("div");
     card.className = "card";
 
-    const imgJoyas = document.createElement("");
-    imgJoyas.src = imgJoyas;
-    
+    const imgJoya = document.createElement("img");
+    imgJoya.src = el.img;
 
+    const btnInfo = document.createElement("button");
+    btnInfo.innerText = "Comprar";
+    btnInfo.onclick = () => alert("Compraste un " + joyas);
 
-
-    card.appendChild(imgJoyas);
+    card.appendChild(imgJoya);
     card.appendChild(btnInfo);
 
     container.appendChild(card);
 })
 
-localStorage.setItem("nombreUsuario", + nombreJoya);
-var Joyas = localStorage.getItem("nombreJoyas");
-localStorage.removeItem("nombreJoyas");
+const productoJoya = [
+    {
+        id: 1,
+        nombre: "Anillo esmeralda"
+    },
+    {
+        id: 2,
+        nombre: "Dije esmeralda"
+    },
+    {
+        id: 3,
+        nombre: "Pulsera esmeraldas"
+    },
+];
+const carrito = [];
+localStorage.setItem("todosMisProductos", JSON.stringify(productoJoya));
+const Joya = JSON.parse(localStorage.getItem("carrito")) || [];
+console.log(productoJoya)
+const productoAAgregar = {
+    id: 4,
+    nombre: "Comprar",
+};
+productoJoya.push(productoAAgregar);
+localStorage.setItem("todosMisProductos", JSON.stringify(productoJoya))
+console.log(productoJoya);
+
+function addFriendSystem(pname, ptarjeta ){
+    var nuevoCliente 
+        name = pname
+        ptarjeta = tarjeta
+}
+
+console.log(nuevoCliente);
+getfriendList.push(nuevoCliente);
+localStorageFriendList(friendList);
+
+function getfriendList(){
+    var  storedList = localStorage.getItem('localstorageFriendList');
+    if(storedList == null){
+        friendList = []
+    } else {friendList = JSON.parse(storedList)}
+    {
+    return friendList;}
+};
 
 
+
+function localStorageFriendList(plist){
+    localStorage.getItem('localstorageFriendList', JSON.stringify()(plist))
+}

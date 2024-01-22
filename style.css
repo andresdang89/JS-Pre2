@@ -5,7 +5,8 @@
     font-family: 'Roboto', sans-serif;
     align-items: center;
     padding: 2rem;
-    
+    display: flex;
+    align-items: baseline;
 }
 .container{
     background-color: rgb(119, 117, 114);
@@ -13,11 +14,12 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
+    position: relative;
 }
 
 .card{
-    display: grid;
-    justify-content: center;
+    display: flexbox;
+    justify-content: right;
     align-items: center;
     padding: 2rem;
     height: 10rem;
